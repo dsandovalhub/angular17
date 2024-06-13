@@ -5,6 +5,7 @@ import { HashDemoComponent } from './pages/hash-demo/hash-demo.component';
 import { Jssha256Component } from './pages/jssha256/jssha256.component';
 import { Pbkdf2Component } from './pages/pbkdf2/pbkdf2.component';
 import { EncrypComponent } from './pages/encryp/encryp.component';
+import { AesComponent } from './pages/aes/aes.component';
 
 export const routes: Routes = [
     {
@@ -30,5 +31,9 @@ export const routes: Routes = [
     {
         path: 'encrypt',
         component: EncrypComponent
+    },
+    {
+        path: 'aes',
+        component: AesComponent
     }
 ];
