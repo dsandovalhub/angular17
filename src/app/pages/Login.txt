@@ -1,0 +1,30 @@
+Login
+    user: dsandoval
+    pass: abcd1234
+
+1. Consulata: 
+    Salt: 16 x user
+
+2. Result:
+    sha(pass, Salt) = 7RyUh55iBPov63EbfOyyfg==
+
+BK:
+    Result == passSHA
+
+
+BD
+    passSHA: 7RyUh55iBPov63EbfOyyfg==
+    Salt: 16
+
+password: abcd1234
+Salt: 776e9695f28e4a3131738e1f104483ad
+Derived Key: cb90d1977eb5a6d52484867f977f9fec59d61a12161ce193a546ab403c1c19a0
+
+
+6ad099462c01bbee09a2b151f5be4d82d71a728e3fbff4fbe87ac5b7944324a6
+
+6ad099462c01bbee09a2b151f5be4d82d71a728e3fbff4fbe87ac5b7944324a6
+
+e18fb512d2e7d228629cd714448ccf02cec91b261e6a7a98b26c09353cc6f488
+
+e18fb512d2e7d228629cd714448ccf02

@@ -1,0 +1,22 @@
+<div style="text-align:center">
+     
+    <div>
+      <label for="password">Enter Password:</label>
+      <input type="" id="password" #passwordInput>
+      <button (click)="register(passwordInput.value)">Encrypt Password</button>
+      
+    <br>
+    <div>
+      <label for="passwordLg">Enter Password:</label>
+      <input type="password" id="passwordLg" #password>      
+      <button (click)="login(password.value)">LOGIN</button>
+    </div>
+  
+    <!-- <div>
+      <p><strong>Salt:</strong> {{ salt }}</p>
+      <p><strong>Encrypted Password:</strong> {{ encryptedPassword }}</p>
+      <p><strong>Decrypted Password:</strong> {{ decryptedPassword }}</p>
+      <button (click)="decryptPassword()">Decrypt Password</button>
+    </div> -->
+  </div>
+  

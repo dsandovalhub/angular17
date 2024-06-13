@@ -1,0 +1,13 @@
+<div>
+    <label for="password">Password:</label>
+    <!-- <input id="password" [(ngModel)]="password" type="text"> -->
+    <input id="password" [(ngModel)]="password" type="text">
+  </div>
+  <div>
+    <button (click)="generateHash()">Generate Hash</button>
+  </div>
+  <div>
+    <p><strong>Salt:</strong> {{ salt }}</p>
+    <p><strong>Hashed Password:</strong> {{ hashedPassword }}</p>
+  </div>
+  
