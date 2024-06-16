@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+
 
 @Component({
   selector: 'app-labs',
@@ -11,35 +12,50 @@ import { Component } from '@angular/core';
 export class LabsComponent {
   title = 'APP';
   welcome = 'Hola!';
-  tasks = [
+  tasks = signal([
     'instalar el angualr cli',
     'instalar proyecto',
     'ejecutar proyecto'
-  ]
+  ]);
 
-  name = 'David';
-  age = 18;
+  //va a tener reatividade granular
+  name = signal('David'); 
+  age = 19;
   disabled = true;
   img ='https://w3schools.com/howto/img_avatar.png';
 
-  persona = {
+  persona =signal({
     name: 'David',
-    age: 18,
+    age: 11,
     avatar:'https://w3schools.com/howto/img_avatar.png'
-  }
+  })
 
   clickHandler (){
-    alert('Click')
+    alert('Click!!!!!!!')
   }
 
   changeHandler(event: Event) {
-    console.log('evento', event);  
+    const input = event.target as HTMLInputElement;    
+    const newValue = input.value;
+    this.name.set(newValue)    
+    console.log('newValue', newValue);  
     
-    }
+  }
     
-    keydownHandler(event: KeyboardEvent){
-      const input = event.target as HTMLInputElement;
-    console.log('input', input.value);  
+  keydownHandler(event: KeyboardEvent){
+    const input = event.target as HTMLInputElement;
+    console.log('evento 2:', input.value);
+  }
+
+  changeAge(event: Event){
+    const input = event.target as HTMLInputElement;    
+    const newValue = input.value;
+    this.persona.update(personaAnt =>{
+      return {
+        ...personaAnt,
+        age: parseInt(newValue)
+      }
+    })
 
   }
 
